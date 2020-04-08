@@ -36,9 +36,9 @@ def generate_random_key():
 
 @activity
 def encrypt_text_with_key(text, key):
-    """Encrypt text 
+    """Encrypt text
 
-    Encrypt text with (Fernet) key, 
+    Encrypt text with (Fernet) key,
 
     :parameter text: Text to be encrypted.
     :parameter key: Path where key is stored.
@@ -102,7 +102,7 @@ def decrypt_text_with_key(encrypted_text, key):
 
 @activity
 def encrypt_file_with_key(input_path, key, output_path=None):
-    """Encrypt file 
+    """Encrypt file
 
     Encrypt file with (Fernet) key. Note that file will be unusable unless unlocked with the same key.
 
@@ -161,7 +161,7 @@ def decrypt_file_with_key(input_path, key, output_path=None):
 
     :parameter input_file: Bytes-like file to be decrypted.
     :parameter key: Path where key is stored.
-    :parameter output_file: Outputfile, make sure to give this the same extension as basefile before encryption. Default is the same directory with "_decrypted" added to the name 
+    :parameter output_file: Outputfile, make sure to give this the same extension as basefile before encryption. Default is the same directory with "_decrypted" added to the name
 
     :return: Path to decrypted file
 
@@ -256,7 +256,7 @@ def generate_key_from_password(password, salt=None):
 def generate_hash_from_file(input_path, method="md5", buffer_size=65536):
     """Hash from file
 
-    Generate hash from file 
+    Generate hash from file
 
     Can be used to create unique identifier for file validation or comparison.
 
@@ -642,7 +642,7 @@ def generate_random_beep(max_duration=2000, max_frequency=5000):
 
     :return: Sound
 
-        :Example: 
+        :Example:
 
     >>> # Generate a random beep
     >>> generate_random_beep()
@@ -667,34 +667,34 @@ def generate_random_date(formatting="%m/%d/%Y %I:%M", days_in_past=1000):
 
     Generates a random date.
 
-    -   %a	Abbreviated weekday name.	 
-    -   %A	Full weekday name.	 
-    -   %b	Abbreviated month name.	 
-    -   %B	Full month name.	 
-    -   %c	Predefined date and time representation.	 
-    -   %d	Day of the month as a decimal number [01,31].	 
-    -   %H	Hour (24-hour clock) as a decimal number [00,23].	 
-    -   %I	Hour (12-hour clock) as a decimal number [01,12].	 
-    -   %j	Day of the year as a decimal number [001,366].	 
-    -   %m	Month as a decimal number [01,12].	 
-    -   %M	Minute as a decimal number [00,59].	 
+    -   %a	Abbreviated weekday name.
+    -   %A	Full weekday name.
+    -   %b	Abbreviated month name.
+    -   %B	Full month name.
+    -   %c	Predefined date and time representation.
+    -   %d	Day of the month as a decimal number [01,31].
+    -   %H	Hour (24-hour clock) as a decimal number [00,23].
+    -   %I	Hour (12-hour clock) as a decimal number [01,12].
+    -   %j	Day of the year as a decimal number [001,366].
+    -   %m	Month as a decimal number [01,12].
+    -   %M	Minute as a decimal number [00,59].
     -   %p	AM or PM.
-    -   %S	Second as a decimal number [00,61].	
-    -   %U	Week number of the year (Sunday as the first day of the week) as a decimal number [00,53]. All days in a new year preceding the first Sunday are considered to be in week 0.	
-    -   %w	Weekday as a decimal number [0(Sunday),6].	 
-    -   %W	Week number of the year (Monday as the first day of the week) as a decimal number [00,53]. All days in a new year preceding the first Monday are considered to be in week 0.	
-    -   %x	Predefined date representation.	 
-    -   %X	Predefined time representation.	 
-    -   %y	Year without century as a decimal number [00,99].	 
+    -   %S	Second as a decimal number [00,61].
+    -   %U	Week number of the year (Sunday as the first day of the week) as a decimal number [00,53]. All days in a new year preceding the first Sunday are considered to be in week 0.
+    -   %w	Weekday as a decimal number [0(Sunday),6].
+    -   %W	Week number of the year (Monday as the first day of the week) as a decimal number [00,53]. All days in a new year preceding the first Monday are considered to be in week 0.
+    -   %x	Predefined date representation.
+    -   %X	Predefined time representation.
+    -   %y	Year without century as a decimal number [00,99].
     -   %Y	Year with century as a decimal number.
     -   %Z	Time zone name (no characters if no time zone exists).
 
     :parameter days_in_past: Days in the past for which oldest random date is generated, default is 1000 days
-    :parameter formatting: Formatting of the dates, replace with 'None' to get raw datetime format. e.g. format='Current month is %B' generates 'Current month is Januari' and format='%m/%d/%Y %I:%M' generates format 01/01/1900 00:00. 
+    :parameter formatting: Formatting of the dates, replace with 'None' to get raw datetime format. e.g. format='Current month is %B' generates 'Current month is Januari' and format='%m/%d/%Y %I:%M' generates format 01/01/1900 00:00.
 
     :return: Random date as string
 
-        :Example: 
+        :Example:
 
     >>> # Generate a random date
     >>> generate_random_date()
@@ -757,7 +757,7 @@ Icon: lab la-wpforms
 def ask_user_input(title="Title", label="Input", password=False):
     """Ask user for input
 
-    Prompt the user for an input with a pop-up window. 
+    Prompt the user for an input with a pop-up window.
 
     :parameter title: Title for the pop-up window
     :parameter message: The message to be shown to the user
@@ -910,7 +910,7 @@ def ask_credentials(
 def display_message_box(title="Title", message="Example message"):
     """Shows message box
 
-    A pop-up message with title and message. 
+    A pop-up message with title and message.
 
     :parameter title: Title for the pop-up window
     :parameter message: The message to be shown to the user
@@ -1390,7 +1390,7 @@ class Chrome(selenium.webdriver.Chrome):
     def by_xpaths(self, element):
         """Find all XPaths
 
-        Find all elements with specified xpath on a webpage in the the browser. Can also use native 'find_elements_by_xpath' 
+        Find all elements with specified xpath on a webpage in the the browser. Can also use native 'find_elements_by_xpath'
 
             :Example:
 
@@ -1415,7 +1415,7 @@ class Chrome(selenium.webdriver.Chrome):
     def by_xpath(self, element):
         """Find XPath in browser
 
-        Find all element with specified xpath on a webpage in the the browser. Can also use native 'find_elements_by_xpath' 
+        Find all element with specified xpath on a webpage in the the browser. Can also use native 'find_elements_by_xpath'
 
             :Example:
 
@@ -1493,7 +1493,7 @@ class Chrome(selenium.webdriver.Chrome):
     def by_class_and_by_text(self, element, text):
         """Find element in browser based on class and text
 
-        Find all elements with specified class and text on a webpage in the the browser. 
+        Find all elements with specified class and text on a webpage in the the browser.
 
             :Example:
 
@@ -1579,7 +1579,7 @@ Icon: las la-key
 def set_credential(username=None, password=None, system="Automagica"):
     """Set credential
 
-    Add a credential which stores credentials locally and securely. All parameters should be Unicode text. 
+    Add a credential which stores credentials locally and securely. All parameters should be Unicode text.
 
     :parameter username: Username for which credential will be added.
     :parameter password: Password to add
@@ -1607,10 +1607,10 @@ def set_credential(username=None, password=None, system="Automagica"):
 def delete_credential(username=None, password=None, system="Automagica"):
     """Delete credential
 
-    Delete a locally stored credential. All parameters should be Unicode text. 
+    Delete a locally stored credential. All parameters should be Unicode text.
 
     :parameter username: Username for which credential (username + password) will be deleted.
-    :parameter system: Name of the system for which password will be deleted. 
+    :parameter system: Name of the system for which password will be deleted.
 
 
         :Example:
@@ -1634,7 +1634,7 @@ def delete_credential(username=None, password=None, system="Automagica"):
 def get_credential(username=None, system="Automagica"):
     """Get credential
 
-    Get a locally stored redential. All parameters should be Unicode text. 
+    Get a locally stored redential. All parameters should be Unicode text.
 
     :parameter username: Username to get password for.
     :parameter system: Name of the system for which credentials are retreived.
@@ -1673,7 +1673,7 @@ class FTP:
         Can be used to automate activites for FTP
 
         :parameter server: Name of the server
-        :parameter username: Username 
+        :parameter username: Username
         :parameter password: Password
 
             :Example:
@@ -1697,13 +1697,13 @@ class FTP:
     @activity
     def download_file(self, input_path, output_path=None):
         """Download file
-        
+
         Downloads a file from FTP server. Connection needs to be established first.
 
         :parameter input_path: Path to the file on the FPT server to download
         :parameter output_path: Destination path for downloaded files. Default is the same directory with "_downloaded" added to the name
 
-        :return: Path to output file as string 
+        :return: Path to output file as string
 
             :Example:
 
@@ -1738,11 +1738,11 @@ class FTP:
     @activity
     def upload_file(self, input_path, output_path=None):
         """Upload file
-        
+
         Upload file to FTP server
 
         :parameter from_path: Path file that will be uploaded
-        :parameter to_path: Destination path to upload. 
+        :parameter to_path: Destination path to upload.
 
         :return: Patht to uploaded file as string
 
@@ -1803,7 +1803,7 @@ class FTP:
     @activity
     def directory_exists(self, path="/"):
         """Check FTP directory
-        
+
         Check if FTP directory exists
 
         :parameter path: Path to check on existence. Default is main directory
@@ -1848,7 +1848,7 @@ class FTP:
         >>> # Trying to create a directory will most likely fail due to permission
         >>> ftp = FTP('test.rebex.net', 'demo', 'password')
         >>> # Create directory
-        >>> ftp.create_directory('brand_new_directory')      
+        >>> ftp.create_directory('brand_new_directory')
         False
 
         Keywords
@@ -1946,7 +1946,7 @@ def easy_key_translation(key):
 def press_key(key=None):
     """Press key
 
-    Press and release an entered key. Make sure your keyboard is on US layout (standard QWERTY). 
+    Press and release an entered key. Make sure your keyboard is on US layout (standard QWERTY).
     If you are using this on Mac Os you might need to grant acces to your terminal application. (Security Preferences > Security & Privacy > Privacy > Accessibility)
 
     Supported keys:
@@ -2009,7 +2009,7 @@ def press_key_combination(first_key, second_key, third_key=None, force_pyautogui
 
     >>> # Open notepad to illustrate typing
     >>> run('notepad.exe')
-    >>> # Press 'ctrl + s' to prompt save window 
+    >>> # Press 'ctrl + s' to prompt save window
     >>> press_key_combination('ctrl', 's')
 
     Keywords
@@ -2151,7 +2151,7 @@ def get_mouse_position(delay=None, to_clipboard=False):
 def display_mouse_position(duration=10):
     """Display mouse position
 
-    Displays mouse position in an overlay. Refreshes every two seconds. Can be used to find mouse position of element on the screen. 
+    Displays mouse position in an overlay. Refreshes every two seconds. Can be used to find mouse position of element on the screen.
     These coordinates represent the absolute pixel position of the mouse on the computer screen. The x-coördinate starts on the left side and increases going right. The y-coördinate increases going down.
 
     :parameter duration: Duration to show overlay.
@@ -2192,7 +2192,7 @@ def click(element_id=None, x=None, y=None, delay=0.1):
     :parameter element_id: ID of the element. To define an element and attach an ID one can use the Automagica recorder. The recorder uses vision to detect an element and can be invoked with the recorder() function.
     :parameter x: X-coördinate
     :parameter y: Y-coördinate
-    :parameter delay: Delay between clicks in seconds, standard value is 100 ms. 
+    :parameter delay: Delay between clicks in seconds, standard value is 100 ms.
 
     :return: Mouse click
 
@@ -2241,7 +2241,7 @@ def double_click(element_id=None, x=None, y=None, delay=0.1):
     :parameter id: ID of the element. To define an element and attach an ID one can use the Automagica recorder. The recorder uses vision to detect an element and can be invoked with the recorder() function.
     :parameter x: X-coördinate
     :parameter y: Y-coördinate
-    :parameter delay: Delay between double clicks in seconds, standard value is 100 ms. 
+    :parameter delay: Delay between double clicks in seconds, standard value is 100 ms.
 
     :return: Double mouse click
 
@@ -2290,7 +2290,7 @@ def right_click(element_id=None, x=None, y=None, delay=0.1):
     :parameter id: ID of the element. To define an element and attach an ID one can use the Automagica recorder. The recorder uses vision to detect an element and can be invoked with the recorder() function.
     :parameter x: X-coördinate
     :parameter y: Y-coördinate
-    :parameter delay: Delay between right clicks in seconds, standard value is 100 ms. 
+    :parameter delay: Delay between right clicks in seconds, standard value is 100 ms.
 
     :return: Right mouse click
 
@@ -2340,7 +2340,7 @@ def move_mouse_to(element_id=None, x=None, y=None, delay=0.1):
     :parameter id: ID of the element. To define an element and attach an ID one can use the Automagica recorder. The recorder uses vision to detect an element and can be invoked with the recorder() function.
     :parameter x: X-coördinate
     :parameter y: Y-coördinate
-    :parameter delay: Delay between movements in seconds, standard value is 100 ms. 
+    :parameter delay: Delay between movements in seconds, standard value is 100 ms.
 
     :return: Move mouse to (x, y) coordinates
 
@@ -2416,10 +2416,10 @@ def drag_mouse_to(element_id=None, x=None, y=None, delay=0.1, button="left"):
     :parameter id: ID of the element. To define an element and attach an ID one can use the Automagica recorder. The recorder uses vision to detect an element and can be invoked with the recorder() function.
     :parameter x: X-coördinate
     :parameter y: Y-coördinate
-    :parameter delay: Delay between movements in seconds, standard value is 100 ms. 
+    :parameter delay: Delay between movements in seconds, standard value is 100 ms.
     :parameter button: Button to hold while dragging. Options are 'left', 'middle' and 'right'. Standard value is 'left'.
 
-    :return: Drag mouse 
+    :return: Drag mouse
 
         :Example:
 
@@ -2602,7 +2602,7 @@ def double_click_image(filename=None):
 
     :return: True if image was found and double clicked on. False if template image was not found.
 
-        :Example: 
+        :Example:
 
     >>> # Create a random snippet from current screen
     >>> # This is for illustration and can be replaced by template
@@ -2611,7 +2611,7 @@ def double_click_image(filename=None):
     >>> double_click_image(snippet)
 
     Keywords
-        image matching, matching, vision, button, double click, template, template matching,click 
+        image matching, matching, vision, button, double click, template, template matching,click
 
     Icon
         las la-image
@@ -2716,7 +2716,7 @@ def get_files_in_folder(
     """List files in folder
 
     List all files in a folder (and subfolders)
-    Checks all folders and subfolders for files. This could take some time for large repositories. 
+    Checks all folders and subfolders for files. This could take some time for large repositories.
 
     :parameter path: Path of the folder to retreive files from. Default folder is the home directory.
     :parameter extension: Optional filter on certain extensions, for example 'pptx', 'exe,' xlsx', 'txt', .. Default value is no filter.
@@ -2734,7 +2734,7 @@ def get_files_in_folder(
     Keywords
         folder, files, explorer, nautilus, folder, file, create folder, get files, list files, all files, overview, get files
 
-    Icon 
+    Icon
         las la-search
     """
     import os
@@ -2986,7 +2986,7 @@ def remove_folder(path, allow_root=False, delete_read_only=True):
 @activity
 def empty_folder(path, allow_root=False):
     """Empty folder
-    
+
     Remove all contents from a folder
     For the function to work optimal, all files and subfolders in the main targetfolder should be closed.
 
@@ -3002,7 +3002,7 @@ def empty_folder(path, allow_root=False):
     >>> text_file_location = os.path.join(testfolder, 'testfile.txt')
     >>> make_text_file(output_path=text_file_location )
     >>> # Print all files in the testfolder
-    >>> print( get_files_in_folder(testfolder) ) # Should show 
+    >>> print( get_files_in_folder(testfolder) ) # Should show
     >>> # Empty the folder
     >>> empty_folder(testfolder)
     >>> # Check what is in the folder
@@ -3108,7 +3108,7 @@ def copy_folder(from_path, to_path=None):
 def zip_folder(path, new_path=None):
     """Zip
 
-     Zia folder and it's contents. Creates a .zip file. 
+     Zia folder and it's contents. Creates a .zip file.
 
     :parameter path: Full path to the source location of the folder that will be zipped
     :parameter new_path: Full path to save the zipped folder. If no path is specified a folder with the original folder name plus 4 random characters
@@ -3149,7 +3149,7 @@ def unzip(path, to_path=None):
     Unzips a file or folder from a .zip file.
 
     :parameter path: Full path to the source location of the file or folder that will be unzipped
-    :parameter to_path: Full path to save unzipped contents. If no path is specified the unzipped contents will be stored in the same directory as the zipped file is located. 
+    :parameter to_path: Full path to save unzipped contents. If no path is specified the unzipped contents will be stored in the same directory as the zipped file is located.
 
     :return: Path to unzipped folder
 
@@ -3236,7 +3236,7 @@ def wait(seconds=1):
         wait, sleep, time, timeout, time-out, hold, pause
 
     Icon
-        las la-hourglass        
+        las la-hourglass
     """
     from time import sleep
 
@@ -3248,7 +3248,7 @@ def wait_for_image(path=None, timeout=60):
     """Wait for image
 
     Waits for an image to appear on the screen
-    Note that this activity waits for an exact match of the template image to appear on the screen. 
+    Note that this activity waits for an exact match of the template image to appear on the screen.
     Small variations, such as color or resolution could result in a mismatch.
 
     :parameter path: Full or relative path to the template image.
@@ -3445,7 +3445,7 @@ class Word:
     def replace_text(self, placeholder_text, replacement_text):
         """Replace text
 
-        Can be used for example to replace arbitrary placeholder value. For example when 
+        Can be used for example to replace arbitrary placeholder value. For example when
         using template document, using 'XXXX' as a placeholder. Take note that all strings are case sensitive.
 
         :parameter placeholder_text: Placeholder text value (string) in the document, this will be replaced, e.g. 'Company Name'
@@ -3582,7 +3582,7 @@ class Word:
     @activity
     def set_footers(self, text):
         """Set footers
-        
+
         Set the footers of the document
 
         :parameter text: Text to put in the footer
@@ -3633,14 +3633,14 @@ class Word:
         """Quit Word
 
         This closes Word, make sure to use 'save' or 'save_as' if you would like to save before quitting.
-        
+
             :Example:
-            
-        >>> # Open Word  
+
+        >>> # Open Word
         >>> word = Word()
         >>> # Quit Word
         >>> word.quit()
-        
+
         Keywords
             excel, exit, quit, close
 
@@ -3661,7 +3661,7 @@ class WordFile:
     def __init__(self, file_path=None):
         """Read and Write Word files
 
-        These activities can read, write and edit Word (docx) files without the need of having Word installed. 
+        These activities can read, write and edit Word (docx) files without the need of having Word installed.
         Note that, in contrary to working with the :func: 'Word' activities, a file get saved directly after manipulation.
 
         :parameter file_path: Enter a path to open Word with an existing Word file. If no path is specified a 'document.docx' will be initialized in the home directory, this is the default value. If a document with the same name already exists the file will be overwritten.
@@ -3790,7 +3790,7 @@ class WordFile:
         :param path: Path to save Wordfile to
 
             :Example:
-            
+
         >>> wordfile = WordFile()
         >>> wordfile.append_text('Some sample text')
         >>> wordfile.save_as('document.docx')
@@ -3813,7 +3813,7 @@ class WordFile:
         :parameter auto_save: Save document after performing activity. Default value is True
 
             :Example:
-            
+
         >>> wordfile = WordFile()
         >>> wordfile.append_text('Some sample text')
         >>> wordfile.set_headers('This is a header')
@@ -3838,7 +3838,7 @@ class WordFile:
 
         Replaces all occurences of a placeholder text in the document with a replacement text.
 
-        Can be used for example to replace arbitrary placeholder value. 
+        Can be used for example to replace arbitrary placeholder value.
         For example when using template slidedeck, using 'XXXX' as a placeholder.
         Take note that all strings are case sensitive.
 
@@ -3847,7 +3847,7 @@ class WordFile:
         :parameter auto_save: Save document after performing activity. Default value is True
 
             :Example:
-            
+
         >>> wordfile = WordFile()
         >>> wordfile.append_text('Some sample text')
         >>> wordfile.replace_text('sample', 'real')
@@ -3882,7 +3882,7 @@ class Outlook:
         For this activity to work, Outlook needs to be installed on the system.
 
             :Example:
-            
+
         >>> outlook = Outlook()
 
         Keywords
@@ -3890,7 +3890,7 @@ class Outlook:
 
         Icon
             las la-mail-bulk
-        
+
         """
         only_supported_for("Windows")
 
@@ -3929,7 +3929,7 @@ class Outlook:
         :parameter attachment_paths: List of file paths to attachments
 
             :Example:
-            
+
         >>> outlook = Outlook()
         >>> outlook.send_mail('test@test.com', subject='Hello world', body='Hi there')
 
@@ -3968,7 +3968,7 @@ class Outlook:
         :parameter limit: Maximum number of folders to retrieve
 
             :Example:
-            
+
         >>> outlook = Outlook()
         >>> outlook.get_folders()
         ['Inbox', 'Sent', ...]
@@ -4007,7 +4007,7 @@ class Outlook:
         :return: List of dictionaries containing the e-mail messages with from, to, subject, body and html.
 
             :Example:
-            
+
         >>> outlook = Outlook()
         >>> outlook.get_mails()
         [
@@ -4206,7 +4206,7 @@ class Outlook:
         :return: List of paths to saved attachments.
 
             :Example:
-            
+
         >>> outlook = Outlook()
         >>> outlook.save_attachments()
         ['Attachment.pdf', 'Signature_image.jpeg']
@@ -4253,7 +4253,7 @@ class Outlook:
     def get_contacts(self, fields=None):
         """Retrieve contacts
 
-        Retrieve all contacts 
+        Retrieve all contacts
 
         :parameter fields: Fields can be specified as a tuple with their exact names. Standard value is None returning "LastName", "FirstName" and "Email1Address".
 
@@ -4341,7 +4341,7 @@ class Outlook:
         Close the Outlook application
 
             :Example:
-            
+
         >>> outlook = Outlook()
         >>> outlook.quit()
 
@@ -4434,7 +4434,7 @@ class Excel:
 
         Icon
             las la-file-excel
-        
+
         """
         worksheet = self.workbook.Worksheets.Add()
         if name:
@@ -4450,7 +4450,7 @@ class Excel:
 
             :Example:
 
-        >>> # Open Excel   
+        >>> # Open Excel
         >>> excel = Excel()
         >>> # Add the first worksheet
         >>> excel.add_worksheet('My Example Worksheet')
@@ -4458,14 +4458,14 @@ class Excel:
         >>> excel.add_worksheet('Another Worksheet')
         >>> # Activate the first worksheet
         >>> excel.activate_worksheet('My Example Worksheet)
-        
+
 
         Keywords
             excel, activate worksheet, set worksheet, select worksheet, select tab, activate tab
 
         Icon
             las la-file-excel
-        
+
         """
         for worksheet in self.workbook.Worksheets:
             if worksheet.Name == name:
@@ -4474,7 +4474,7 @@ class Excel:
     @activity
     def save(self):
         """Save
-        
+
         Save the current workbook
 
             :Example:
@@ -4516,7 +4516,7 @@ class Excel:
 
         Icon
             las la-file-excel
-        
+
         """
         if not path:
             import os
@@ -4566,7 +4566,7 @@ class Excel:
         :return: Cell value
 
             :Example:
-            
+
         >>> # Open Excel
         >>> excel = Excel()
         >>> # Add the first worksheet
@@ -4592,7 +4592,7 @@ class Excel:
 
         :parameter range_: Range to write to, e.g. "A1:D10"
         :parameter value: Value to write to range
-        
+
             :Example:
 
         >>> # Open Excel
@@ -4613,13 +4613,13 @@ class Excel:
     @activity
     def read_range(self, range_):
         """Read range
-        
+
         Read a range of cells from the currently active worksheet in the active workbook
 
         :parameter range_: Range to read from, e.g. "A1:D10"
 
         :return value: Values in param range
-        
+
             :Example:
 
         >>> # Open Excel
@@ -4646,7 +4646,7 @@ class Excel:
 
         Run a macro by name from the currently active workbook
 
-        :parameter name: Name of the macro to run. 
+        :parameter name: Name of the macro to run.
 
             :Example:
 
@@ -4702,7 +4702,7 @@ class Excel:
         :parameter name: List of table names
 
             :Example:
-            
+
         >>> # Open Excel
         >>> excel = Excel()
         >>> # Create a table (Table1)
@@ -4891,7 +4891,7 @@ class Excel:
     @activity
     def write_cell_formula(self, column, row, formula):
         """Write cell formula
-        
+
         Write a formula to a particular cell
 
         :parameter column: Column number (integer) to write formula
@@ -4933,7 +4933,7 @@ class Excel:
         >>> # Read the cell
         >>> excel.read_cell_formula(1, 1)
         '=1+1'
-        
+
         Keywords
             excel, read formula, read calculation
 
@@ -4949,16 +4949,16 @@ class Excel:
         Inserts an empty row to the currently active worksheet
 
         :parameter row: Row number (integer) where to insert empty row e.g 1
-            
+
             :Example:
 
-        >>> # Open Excel              
+        >>> # Open Excel
         >>> excel = Excel()
         >>> excel.write_cell(1, 1, 'Filled')
         >>> excel.write_cell(1, 2, 'Filled')
         >>> excel.write_cell(1, 3, 'Filled')
         >>> excel.insert_empty_row(2)
-        
+
         Keywords
             excel, insert row, add row, empty row
 
@@ -4975,7 +4975,7 @@ class Excel:
         Inserts an empty column in the currently active worksheet. Existing columns will shift to the right.
 
         :parameter column: Column letter (string) where to insert empty column e.g. 'A'
-            
+
             :Example:
 
         >>> # Open Excel
@@ -4984,7 +4984,7 @@ class Excel:
         >>> excel.write_cell(2, 2, 'Filled')
         >>> excel.write_cell(3, 3, 'Filled')
         >>> excel.insert_empty_column(2)
-        
+
         Keywords
             excel, insert column, add column
 
@@ -5004,13 +5004,13 @@ class Excel:
 
             :Example:
 
-        >>> # Open Excel              
+        >>> # Open Excel
         >>> excel = Excel()
         >>> excel.write_cell(1, 1, 'Filled')
         >>> excel.write_cell(2, 2, 'Filled')
         >>> excel.write_cell(3, 3, 'Filled')
         >>> excel.delete_row(2)
-        
+
         Keywords
             excel, delete row, remove row
 
@@ -5030,13 +5030,13 @@ class Excel:
 
             :Example:
 
-        >>> # Open Excel              
+        >>> # Open Excel
         >>> excel = Excel()
         >>> excel.write_cell(1, 1, 'Filled')
         >>> excel.write_cell(2, 2, 'Filled')
         >>> excel.write_cell(3, 3, 'Filled')
         >>> excel.delete_column(2)
-        
+
         Keywords
             excel, delete column, remove column
 
@@ -5053,16 +5053,16 @@ class Excel:
         Export to PDF
 
         :parameter path: Output path where PDF file will be exported to. Default path is home directory with filename 'pdf_export.pdf'.
-        
+
             :Example:
 
-        >>> # Open Excel              
+        >>> # Open Excel
         >>> excel = Excel()
         >>> excel.write_cell(1, 1, 'Filled')
         >>> excel.write_cell(2, 2, 'Filled')
         >>> excel.write_cell(3, 3, 'Filled')
         >>> excel.export_to_pdf('output.pdf')
-        
+
         Keywords
             excel, save as pdf, export to pdf, export as pdf
 
@@ -5079,14 +5079,14 @@ class Excel:
     @activity
     def insert_data_as_table(self, data, range_="A1", table_style="TableStyleMedium2"):
         """Insert data as table
-        
+
         Insert list of dictionaries as a table in Excel
 
         :parameter data: List of dictionaries to write as table
         :parameter range_: Range or startingpoint for table e.g. 'A1'
-        
+
             :Example:
-            
+
         >>> excel = Excel()
         >>> data = [
             {
@@ -5100,7 +5100,7 @@ class Excel:
                 'Column C': 'Data Row 2 for C',
             }
         >>> excel.insert_data_as_table(data)
-        
+
         Keywords
             excel, insert data, insert table, create table
 
@@ -5135,10 +5135,10 @@ class Excel:
         :parameter headers: Boolean to treat first row as headers. Default value is False
 
         :return: List of dictionaries with sheet data
-        
+
             :Example:
 
-        >>> # Open excel    
+        >>> # Open excel
         >>> excel = Excel()
         >>> Write some cells
         >>> excel.write_cell(1, 1, 'A')
@@ -5146,7 +5146,7 @@ class Excel:
         >>> excel.write_cell(1, 3, 'C')
         >>> excel.read_worksheet()
         [['A'],['B'],['C']]
-        
+
         Keywords
             excel, read worksheet, export data, read data
 
@@ -5181,14 +5181,14 @@ class Excel:
         """Quit Excel
 
         This closes Excel, make sure to use 'save' or 'save_as' if you would like to save before quitting.
-        
+
             :Example:
-            
-        >>> # Open Excel  
+
+        >>> # Open Excel
         >>> excel = Excel()
         >>> # Quit Excel
         >>> excel.quit()
-        
+
         Keywords
             excel, exit, quit, close
 
@@ -5207,23 +5207,23 @@ Icon: las la-file-excel
 class ExcelFile:
     @activity
     def __init__(self, file_path=None):
-        """Read and Write xlsx files. 
+        """Read and Write xlsx files.
 
-        This activity can read, write and edit Excel (xlsx) files without the need of having Excel installed. 
+        This activity can read, write and edit Excel (xlsx) files without the need of having Excel installed.
         Note that, in contrary to working with the :func: 'Excel' activities, a file get saved directly after manipulation.
 
         :parameter file_path: Enter a path to open Excel with an existing Excel file. If no path is specified a 'workbook.xlsx' will be initialized in the home directory, this is the default value. If a workbook with the same name already exists the file will be overwritten.
-        
+
             :Example:
 
         >>> # Open a new Excel file
         >>> excel_file = ExcelFile()
-        
+
         Keywords
             excel, open, start, xlsx
 
         Icon
-            las la-file-excel    
+            las la-file-excel
 
         """
         import openpyxl
@@ -5242,24 +5242,24 @@ class ExcelFile:
 
     @activity
     def to_dataframe(self):
-        """Export file to dataframe 
+        """Export file to dataframe
 
         Export to pandas dataframe
 
         :parameter file_path: Enter a path to open Excel with an existing Excel file. If no path is specified a 'workbook.xlsx' will be initialized in the home directory, this is the default value. If a workbook with the same name already exists the file will be overwritten.
-        
+
             :Example:
 
         >>> # Open a new Excel file
         >>> excel_file = ExcelFile()
         >>> # Convert to Dataframe
         >>> df = excel_file.to_dataframe()
-        
+
         Keywords
             excel, open, start, xlsx, dataframe,
 
         Icon
-            las la-file-excel    
+            las la-file-excel
 
         """
 
@@ -5273,8 +5273,8 @@ class ExcelFile:
 
         Activate a worksheet. By default the first worksheet is activated.
 
-        :parameter name: Name of the worksheet to activate.        
-        
+        :parameter name: Name of the worksheet to activate.
+
             :Example:
 
         >>> # Open a new Excel file
@@ -5284,7 +5284,7 @@ class ExcelFile:
         >>> excel_file.add_worksheet('Another Worksheet')
         >>> # Activate a worksheet
         >>> excel_file.active_worksheet('My Example Worksheet')
-        
+
         Keywords
             excel, activate tab, activate worksheet
 
@@ -5301,7 +5301,7 @@ class ExcelFile:
         Save file as
 
         :parameter path: Path where workbook will be saved
-        
+
             :Example:
 
         >>> # Open a new Excel file
@@ -5312,7 +5312,7 @@ class ExcelFile:
         >>> excel_file.save_as('output.xlsx')
         >>> # We can also save it in the home directory by using
         >>> excel_file.save_as( home_path('output.xlsx') )
-        
+
         Keywords
             excel, save as, export, save
 
@@ -5331,7 +5331,7 @@ class ExcelFile:
         :parameter row: Row number (integer) to write
         :parameter value: Value to write to specific cell
         :parameter auto_save: Save document after performing activity. Default value is True
-        
+
             :Example:
 
         >>> # Open a new Excel file
@@ -5339,7 +5339,7 @@ class ExcelFile:
         >>> # Add a worksheet
         >>> excel_file.add_worksheet('My Example Worksheet')
         >>> excel_file.write_cell(1, 1, 'Filled!')
-        
+
         Keywords
             excel, write cell, insert data
 
@@ -5378,7 +5378,7 @@ class ExcelFile:
         >>> # Read the first cell
         >>> excel_file.read_cell(1, 1)
         'Filled!'
-        
+
         Keywords
             excel, read cell, read
 
@@ -5411,7 +5411,7 @@ class ExcelFile:
         >>> # List all the worksheets
         >>> excel.get_worksheet_names()
 
-        
+
         Keywords
             excel, add worksheet, worksheet
 
@@ -5432,7 +5432,7 @@ class ExcelFile:
         :return: List of worksheet names
 
            :Example:
-            
+
         >>> # Open a new Excel file
         >>> excel_file = ExcelFile()
         >>> # Add some worksheets
@@ -5441,7 +5441,7 @@ class ExcelFile:
         >>> # Get the worksheet names
         >>> excel_file.get_worksheet_names()
         ['My Example Worksheet', 'Another Worksheet']
-        
+
         Keywords
             excel, worksheet names, worksheet,
 
@@ -5469,9 +5469,9 @@ class PowerPoint:
         :parameter visible: Show PowerPoint in the foreground if True or hide if False, defaults to True.
         :parameter path: Enter a path to open an existing PowerPoint presentation. If no path is specified a new presentation will be initialized, this is the default value.
         :parameter add_slide: Add an initial empty slide when creating new PowerPointfile, this prevents errors since most manipulations require a non-empty presentation. Default value is True
-        
+
             :Example:
-            
+
         >>> # Start PowerPoint
         >>> powerpoint = PowerPoint()
 
@@ -5480,7 +5480,7 @@ class PowerPoint:
 
         Icon
             las la-file-powerpoint
-        
+
         """
         only_supported_for("Windows")
 
@@ -5510,13 +5510,13 @@ class PowerPoint:
     @activity
     def save_as(self, path=None):
         """Save PowerPoint
-        
+
         Save PowerPoint Slidedeck
 
         :parameter path: Save the PowerPoint presentation. Default value is the home directory and filename 'presentation.pptx'
 
             :Example:
-            
+
         >>> # Start PowerPoint
         >>> powerpoint = PowerPoint()
         >>> # Add a first slide
@@ -5548,7 +5548,7 @@ class PowerPoint:
         :parmeter type: Type of the slide to be added. Supports following types: blank, chart, text, title and picture.
 
             :Example:
-            
+
         >>> # Start PowerPoint
         >>> powerpoint = PowerPoint()
         >>> # Close PowerPoint
@@ -5574,7 +5574,7 @@ class PowerPoint:
         :parmeter type: Type of the slide to be added. Supports following types: blank, chart, text, title and picture.
 
             :Example:
-            
+
         >>> # Start PowerPoint
         >>> powerpoint = PowerPoint()
         >>> # Add a first slide
@@ -5607,11 +5607,11 @@ class PowerPoint:
     @activity
     def number_of_slides(self):
         """Slide count
-        
+
         Returns the number of slides
 
             :Example:
-            
+
         >>> # Start PowerPoint
         >>> powerpoint = PowerPoint()
         >>> # Add some slides
@@ -5642,7 +5642,7 @@ class PowerPoint:
         margin_top=100,
     ):
         """Text to slide
-        
+
         Add text to a slide
 
         :parameter index: Slide index to add text. If none is specified, a new slide will be added as final slide
@@ -5656,7 +5656,7 @@ class PowerPoint:
         :parameter margin_top: Margin from the top in pixels, default value is 100 pixels
 
             :Example:
-            
+
         >>> # Start PowerPoint
         >>> powerpoint = PowerPoint()
         >>> # Add slide with text
@@ -5718,7 +5718,7 @@ class PowerPoint:
     def replace_text(self, placeholder_text, replacement_text):
         """Replace all occurences of text in PowerPoint slides
 
-        Can be used for example to replace arbitrary placeholder value in a PowerPoint. 
+        Can be used for example to replace arbitrary placeholder value in a PowerPoint.
         For example when using a template slidedeck, using 'XXXX' as a placeholder.
         Take note that all strings are case sensitive.
 
@@ -5726,7 +5726,7 @@ class PowerPoint:
         :parameter replacement_text: Text (string) to replace the placeholder values with. It is recommended to make this unique in your PowerPoint to avoid wrongful replacement, e.g. 'XXXX_placeholder_XXX'
 
             :Example:
-            
+
         >>> # Start PowerPoint
         >>> powerpoint = PowerPoint()
         >>> # Add some slides with text
@@ -5750,13 +5750,13 @@ class PowerPoint:
     @activity
     def export_to_pdf(self, path=None):
         """PowerPoint to PDF
-        
+
         Export PowerPoint presentation to PDF file
 
         :parameter path: Output path where PDF file will be exported to. Default path is home directory with filename 'pdf_export.pdf'.
 
             :Example:
-            
+
         >>> # Start PowerPoint
         >>> powerpoint = PowerPoint()
         >>> # Add some slides with text
@@ -5787,14 +5787,14 @@ class PowerPoint:
     @activity
     def export_slides_to_images(self, path=None, type="png"):
         """Slides to images
-        
+
         Export PowerPoint slides to seperate image files
 
         :parameter path: Output path where image files will be exported to. Default path is home directory.
         :parameter type: Output type of the images, supports 'png' and 'jpg' with 'png' as default value
 
             :Example:
-            
+
         >>> # Start PowerPoint
         >>> powerpoint = PowerPoint()
         >>> # Add some slides with text
@@ -5878,7 +5878,7 @@ def salesforce_api_call(action, key, parameters={}, method="get", data={}):
     Activity to make calls to Salesforce REST API.
 
     :parameter action: Action (the URL)
-    :parameter key: Authorisation key 
+    :parameter key: Authorisation key
     :parameter parameters: URL params
     :parameter method: Method (get, post or patch)
     :parameter data: Data for POST/PATCH.
@@ -5943,13 +5943,13 @@ def send_mail_smtp(
 ):
     """Mail with SMTP
 
-    This function lets you send emails with an e-mail address. 
+    This function lets you send emails with an e-mail address.
 
-    :parameter smpt_host: The host of your e-mail account. 
+    :parameter smpt_host: The host of your e-mail account.
     :parameter smpt_user: The password of your e-mail account
     :parameter smpt_password: The password of your e-mail account
-    :parameter to_address: The destination is the receiving mail address. 
-    :parameter subject: The subject 
+    :parameter to_address: The destination is the receiving mail address.
+    :parameter subject: The subject
     :parameter message: The body of the mail
     :parameter port: The port variable is standard 587. In most cases this argument can be ignored, but in some cases it needs to be changed to 465.
 
@@ -5964,6 +5964,12 @@ def send_mail_smtp(
         las la-mail-bulk
 
     """
+    import smtplib
+    from email.mime.multipart import MIMEMultipart
+    from email.mime.text import MIMEText
+    from email.mime.base import MIMEBase
+    from email import encoders
+
     BODY = "\r\n".join(
         [
             "To: %s" % destination,
@@ -5980,74 +5986,64 @@ def send_mail_smtp(
     smtpObj.sendmail(user, destination, BODY)
     smtpObj.quit()
 
-"""
-E-mail (with attachments)
-"""
+
 @activity
-def send_mail_attachment(_host, _user, _password, _to_address, _subject="", _message="", _port=587, _attachment=None):
+def send_mail_attachment(smtp_host, smtp_user, smtp_password, to_address, subject="", message="", port=587, attachment=None):
     import smtplib
-    from email.mime.multipart import MIMEMultipart 
-    from email.mime.text import MIMEText 
-    from email.mime.base import MIMEBase 
-    from email import encoders 
+    from email.mime.multipart import MIMEMultipart
+    from email.mime.text import MIMEText
+    from email.mime.base import MIMEBase
+    from email import encoders
     """Mail using SMTP with attachments
 
-    This function lets you send emails with an e-mail address and also add attachments. 
+    This function lets you send emails with attachments.
 
-    :parameter _host: The host of your e-mail account. 
-    :parameter _user: The password of your e-mail account
-    :parameter _password: The password of your e-mail account
-    :parameter _to_address: The destination is the receiving mail address. 
-    :parameter _subject: The subject 
-    :parameter _message: The body of the mail
-    :parameter _port: The port variable is standard 587. In most cases this argument can be ignored, but in some cases it needs to be changed to 465.
-    :parameter _attachment: The attachments to be sent with the email are to be mentioned in the form of a dictionary
-    sample:
-            attachments={
-                '<filename1>.<extension>':'<filepath>',
-                '<filename2>.<extension>:'<filepath>'
-            }
+    :parameter smtp_host: The host of your e-mail account.
+    :parameter smtp_user: The password of your e-mail account
+    :parameter smtp_password: The password of your e-mail account
+    :parameter to_address: The destination is the receiving mail address.
+    :parameter subject: The subject
+    :parameter message: The body of the mail
+    :parameter port: The port variable is standard 587. In most cases this argument can be ignored, but in some cases it needs to be changed to 465.
+    :parameter attachment: The attachments to be sent with the email are to be mentioned in the form of a dictionary
 
         :Example:
-    >>>attachments = {
-        'data.xlsx':'C:/Users/robot/Documents/data.xlsx',
-        'resume.pdf':'C:/Users/admin/Documents/resume.pdf'
-            }
 
+    >>>attachments = {'data.xlsx':'C:/Users/robot/Documents/data.xlsx','resume.pdf':'C:/Users/admin/Documents/resume.pdf'}
     >>> send_mail_smpt('robot@automagica.com', 'SampleUser', 'SamplePassword', 'robotfriend@automagica.com',attachment=attachments)
 
     Keywords
-        mail, e-mail, email smpt, email attachments
+        mail, e-mail, email smpt, email attachment, attachment
 
     Icon
         las la-mail-bulk
 
     """
-    msg = MIMEMultipart()               # storing the senders email address   
-    msg['From'] = _user             # storing the receivers email address  
-    msg['To'] = _to_address              # storing the subject  
-    msg['Subject'] = _subject            # string to store the body of the mail 
-    body = _message                      # attach the body with the msg instance 
+    msg = MIMEMultipart()               # storing the senders email address
+    msg['From'] = user             # storing the receivers email address
+    msg['To'] = to_address              # storing the subject
+    msg['Subject'] = subject            # string to store the body of the mail
+    body = message                      # attach the body with the msg instance
     msg.attach(MIMEText(body, 'plain')) # open the file to be sent
-    
-    if _attachment!=None:
-        if 'dict' not in str(type(_attachment)):
-            raise TypeError("send_mail_attachment() expects a <class 'dict'> obj for attachments but %s"%str(type(l)))
+
+    if attachment:
+        if isinstance(attachment, dict):
+            raise TypeError("Attachment argument needs to be a dictionary")
         else:
-            for i,j in _attachment.items():
+            for i,j in attachment.items():
                 filename = i
                 attachment = open(j, "rb")
                 p = MIMEBase('application', 'octet-stream') # instance of MIMEBase and named as p
-                p.set_payload((attachment).read())          # To change the payload into encoded form 
+                p.set_payload((attachment).read())          # To change the payload into encoded form
                 encoders.encode_base64(p)                   # encode into base64
-                p.add_header('Content-Disposition', "attachment;filename= %s" % filename)# attach the instance 'p' to instance 'msg' 
-                msg.attach(p) 
-            smtpObj = smtplib.SMTP(_host, _port)
+                p.add_header('Content-Disposition', "attachment;filename= %s" % filename)# attach the instance 'p' to instance 'msg'
+                msg.attach(p)
+            smtpObj = smtplib.SMTP(host, port)
             smtpObj.ehlo()
             smtpObj.starttls()
-            smtpObj.login(_user, _password)
+            smtpObj.login(user, password)
             text = msg.as_string()
-            smtpObj.sendmail(_user, _to_address, text)
+            smtpObj.sendmail(user, to_address, text)
             smtpObj.quit()
 
 """
@@ -6407,7 +6403,7 @@ def get_username():
 def set_to_clipboard(text):
     """Set clipboard
 
-    Set any text to the Windows clipboard. 
+    Set any text to the Windows clipboard.
 
     :parameter text: Text to put in the clipboard
 
@@ -6633,7 +6629,7 @@ def disable_network_interface(name):
         :Example:
 
     >>> disable_network_interface('Realtek Gaming GbE Family Controller')
-    
+
     Keywords
         networking, connection, disable
 
@@ -6834,7 +6830,7 @@ def set_window_to_foreground(title):
 @activity
 def get_foreground_window_title():
     """Get foreground window title
-    
+
     Retrieve the title of the current foreground window
 
         :Example:
@@ -6860,7 +6856,7 @@ def get_foreground_window_title():
 @activity
 def close_window(title):
     """Close window
-    
+
     Closes a window by its title
 
     :parameter title: Title of window
@@ -6890,7 +6886,7 @@ def close_window(title):
 @activity
 def maximize_window(title):
     """Maximize window
-    
+
     Maximizes a window by its title
 
     :parameter title: Title of window
@@ -6922,7 +6918,7 @@ def maximize_window(title):
 @activity
 def restore_window(title):
     """Restore window
-    
+
     Restore a window by its title
 
     :parameter title: Title of window
@@ -6954,7 +6950,7 @@ def restore_window(title):
 @activity
 def minimize_window(title):
     """Minimize window
-    
+
     Minimizes a window by its title
 
     :parameter title: Title of window
@@ -6984,7 +6980,7 @@ def minimize_window(title):
 @activity
 def resize_window(title, x, y, width, height):
     """Resize window
-    
+
     Resize a window by its title
 
     :parameter title: Title of window
@@ -7015,7 +7011,7 @@ def resize_window(title, x, y, width, height):
 @activity
 def hide_window(title):
     """Hide window
-    
+
     Hides a window from the user desktop by using it's title
 
     :parameter title: Title of window
@@ -7089,7 +7085,7 @@ Icon: las la-ethernet
 @activity
 def snmp_get(target, oids, credentials, port=161, engine=None, context=None):
     """SNMP Get
-    
+
     Retrieves data from an SNMP agent using SNMP (Simple Network Management Protocol)
 
     :parameter target: Target
@@ -7154,7 +7150,7 @@ class ActiveDirectory:
     @activity
     def __init__(self, ldap_server=None, username=None, password=None):
         """AD interface
-        
+
         Interface to Windows Active Directory through ADSI
 
         Activity to connect the ADSI interface to Microsoft Active Directory.
@@ -7187,7 +7183,7 @@ class ActiveDirectory:
     @activity
     def get_object_by_distinguished_name(self, distinguished_name):
         """Get AD object by name
-        
+
         Interface to Windows Active Directory through ADSI
 
         Activity to connect the ADSI interface to Microsoft Active Directory.
@@ -7322,7 +7318,7 @@ def open_file(path):
 
     Opens file with default programs
 
-    :parameter path: Path to file. 
+    :parameter path: Path to file.
 
     :return: Path to file
 
@@ -7451,7 +7447,7 @@ def add_trello_card(
 ):
     """Add Trello Card
 
-    Add a card to the Trello board. For this you need a Trello API key, secret and token. 
+    Add a card to the Trello board. For this you need a Trello API key, secret and token.
 
 
     :parameter title: Title of Trello card
@@ -7590,7 +7586,7 @@ def move_file(from_path, to_path):
 def remove_file(path):
     """Remove a file
 
-    Remove a file 
+    Remove a file
 
     :parameter path: Full path to the file that will be deleted.
 
@@ -7684,15 +7680,15 @@ def wait_file_exists(path, timeout=60):
 @activity
 def write_list_to_file(list_to_write, file_path):
     """List to .txt
-    
-    Writes a list to a  text (.txt) file. 
+
+    Writes a list to a  text (.txt) file.
     Every element of the entered list is written on a new line of the text file.
 
     :parameter list_to_write: List to write to .txt file
-    :parameter path: Path to the text-file. 
+    :parameter path: Path to the text-file.
 
         :Example:
-    
+
     >>> # Make a list to write
     >>> robot_names = ['WALL-E', 'Terminator', 'R2D2']
     >>> # Create a new text file
@@ -7717,8 +7713,8 @@ def write_list_to_file(list_to_write, file_path):
 def read_list_from_txt(file_path):
     """Read .txt file
 
-    This activity writes the content of a .txt file to a list and returns that list. 
-    Every new line from the .txt file becomes a new element of the list. The activity will 
+    This activity writes the content of a .txt file to a list and returns that list.
+    Every new line from the .txt file becomes a new element of the list. The activity will
     not work if the entered path is not attached to a .txt file.
 
     :parameter path: Path to the .txt file
@@ -7726,7 +7722,7 @@ def read_list_from_txt(file_path):
     :return: List with contents of specified .txt file
 
         :Example:
-    
+
     >>> # Make a list to write
     >>> robot_names = ['WALL-E', 'Terminator', 'R2D2']
     >>> # Create a new text file
@@ -7755,14 +7751,14 @@ def read_list_from_txt(file_path):
 @activity
 def append_line(text, file_path):
     """Append to .txt
-    
+
     Append a text line to a file and creates the file if it does not exist yet.
 
     :parameter text: The text line to write to the end of the file
     :parameter file_path: Path to the file to write to
 
         :Example:
-    
+
     >>> # Create a new text file
     >>> text_file = make_text_file()
     >>> # Append a few lines to the file
@@ -7865,7 +7861,7 @@ def copy_file(old_path, new_path=None):
 
     :parameter old_path: Full path to the source location of the folder
     :parameter new_path: Optional full path to the destination location of the folder. If not specified file will be copied to the same location with a random 8 character uid is added to the name.
-    
+
     :return: New path as string
 
         :Example:
@@ -7881,7 +7877,7 @@ def copy_file(old_path, new_path=None):
 
     Icon
         las la-copy
-    
+
     """
     from uuid import uuid4
     import os
@@ -7903,7 +7899,7 @@ def copy_file(old_path, new_path=None):
 @activity
 def get_file_extension(file_path):
     """Get file extension
-    
+
     Get extension of a file
 
     :parameter file_path: Path to file to get extension from
@@ -7936,7 +7932,7 @@ def get_file_extension(file_path):
 @activity
 def send_to_printer(file):
     """Print
-    
+
     Send file to default printer to priner. This activity sends a file to the printer. Make sure to have a default printer set up.
 
     :parameter file: Path to the file to print, should be a printable file
@@ -7969,14 +7965,14 @@ Icon: las la-file-pdf
 @activity
 def read_text_from_pdf(file_path):
     """Text from PDF
-    
+
     Extracts the text from a PDF. This activity reads text from a pdf file. Can only read PDF files that contain a text layer.
 
     :parameter file_path: Path to the PDF (either relative or absolute)
     :return: The text from the PDF
 
         :Example:
-        
+
     >>> # Caution, for this example to work a .pdf example file will be downloaded from automagica.com FTP
     >>> example_pdf = download_file_from_url('http://automagica.com/examples/example_document.pdf')
     >>> # Open example pdf for illustration
@@ -8006,16 +8002,16 @@ def read_text_from_pdf(file_path):
 @activity
 def join_pdf_files(file_paths, output_path=None):
     """Merge PDF
-    
+
     Merges multiple PDFs into a single file
 
     :parameter file_paths: List of paths to PDF files
     :parameter output_path: Full path where joined pdf files can be written. If no path is given will write to home dir as 'merged_pdf.pdf'
 
     :return: Output path as string
-    
+
         :Example:
-        
+
     >>> # Caution, for this example to work a .pdf example file will be downloaded from automagica.com FTP
     >>> example_pdf = download_file_from_url('http://automagica.com/examples/example_document.pdf')
     >>> # Join the PDF file three times with itself for illustration, could also be different files
@@ -8050,7 +8046,7 @@ def join_pdf_files(file_paths, output_path=None):
 @activity
 def extract_page_range_from_pdf(file_path, start_page, end_page, output_path=None):
     """Extract page from PDF
-    
+
     Extracts a particular range of a PDF to a separate file.
 
     :parameter file_path: Path to the PDF (either relative or absolute)
@@ -8074,7 +8070,7 @@ def extract_page_range_from_pdf(file_path, start_page, end_page, output_path=Non
         PDF, read, extract text, PDF file, extract PDF, join, cut, cut PDF, extract pages, extract from pdf, select page, page
     Icon
         las la-cut
-    
+
     """
     from PyPDF2 import PdfFileWriter, PdfFileReader
 
@@ -8101,13 +8097,13 @@ def extract_page_range_from_pdf(file_path, start_page, end_page, output_path=Non
 @activity
 def extract_images_from_pdf(file_path):
     """Extract images from PDF
-    
+
     Save a specific page from a PDF as an image
 
     :parameter file_path: Full path to store extracted images
 
         :Example:
-        
+
     >>> # Caution, for this example to work a .pdf example file will be downloaded from automagica.com FTP
     >>> example_pdf = download_file_from_url('http://automagica.com/examples/example_document.pdf')
     >>> # Extract the images
@@ -8118,7 +8114,7 @@ def extract_images_from_pdf(file_path):
 
     Icon
         las la-icons
-        
+
     """
     from PyPDF2 import PdfFileReader
     from PIL import Image
@@ -8161,7 +8157,7 @@ def extract_images_from_pdf(file_path):
 def apply_watermark_to_pdf(file_path, watermark_path, output_path=""):
     """Watermark a PDF
 
-    Watermark a PDF 
+    Watermark a PDF
 
     :parameter file_path: Filepath to the document that will be watermarked. Should be pdf file.
     :parameter watermark_path: Filepath to the watermark. Should be pdf file.
@@ -8169,7 +8165,7 @@ def apply_watermark_to_pdf(file_path, watermark_path, output_path=""):
 
     :return: Output path as a string
         :Example:
-        
+
     >>> # Caution, for this example to work a .pdf example file will be downloaded from automagica.com FTP
     >>> example_pdf = download_file_from_url('http://automagica.com/examples/example_document.pdf')
     >>> # Download the watermark
@@ -8251,7 +8247,7 @@ def get_cpu_load(measure_time=1):
 def get_number_of_cpu(logical=True):
     """Count CPU
 
-    Get the number of CPU's in the current system. 
+    Get the number of CPU's in the current system.
 
     :parameter logical: Determines if only logical units are added to the count, default value is True.
 
@@ -8492,7 +8488,7 @@ def rotate_image(path, angle=90):
 
     Rotate an image
 
-    :parameter angle: Degrees to rotate image. Note that angles other than 90, 180, 270, 360 can resize the picture. 
+    :parameter angle: Degrees to rotate image. Note that angles other than 90, 180, 270, 360 can resize the picture.
 
         :Example:
 
@@ -8521,7 +8517,7 @@ def rotate_image(path, angle=90):
 def resize_image(path, size):
     """Resize image
 
-    Resizes the image specified by the path variable. 
+    Resizes the image specified by the path variable.
 
     :parameter path: Path to the image
     :parameter size:  Tuple with the width and height in pixels. E.g.  (300, 400) gives the image a width of 300 pixels and a height of 400 pixels.
@@ -9134,7 +9130,7 @@ def execute_uipath_process(project_file_path, arguments=None, uirobot_exe_path=N
     :parameter project_file_path: path to the project file (as created within the UiPath Studio)
     :parameter arguments: dictionary with input arguments/parameters for the process to use in UiPath (optional)
     :parameter uirobot_exe_path: path to UiPath's UiRobot.exe (optional)
-    
+
 
         :Example:
 
@@ -9180,7 +9176,7 @@ def execute_uipath_process(project_file_path, arguments=None, uirobot_exe_path=N
 
 
 """
-AutoIt 
+AutoIt
 Icon: las la-robot
 """
 
@@ -9194,7 +9190,7 @@ def run_autoit_script(script_path, arguments=None, autoit_exe_path=None):
     :parameter script_path: path to the '.au3' script file
     :parameter arguments: string with input arguments/parameters for the script (optional)
     :parameter autoit_exe_path: path to AutoIt.exe (optional)
-    
+
 
         :Example:
 
@@ -9240,7 +9236,7 @@ def run_autoit_script(script_path, arguments=None, autoit_exe_path=None):
 
 
 """
-Robot Framework 
+Robot Framework
 Icon: las la-robot
 """
 
@@ -9319,7 +9315,7 @@ def run_blueprism_process(
     :parameter sso: Run as single-sign on user with Blue Prism
     :parameter inputs: dictionary with inputs declarations (optional)
     :parameter automatec_exe_path: path to Blue Prism's AutomateC.exe (optional)
-    
+
 
         :Example:
 
@@ -9446,7 +9442,7 @@ class SAPGUI:
 
         Keywords
             sap, sap gui, sap client
-        
+
         Icon
             las la-briefcase
         """
@@ -9481,7 +9477,7 @@ class SAPGUI:
         Quits the SAP GUI completely and forcibly.
 
             :Example:
-            
+
         >>> # Log in to SAP GUI
         >>> sap = SAPGUI()
         >>> sap.login('System', '001', 'username', 'password')
@@ -9490,7 +9486,7 @@ class SAPGUI:
 
         Keywords
             sap, sap gui, sap client, quit
-        
+
         Icon
             las la-briefcase
         """
@@ -9514,14 +9510,14 @@ class SAPGUI:
         Logs in to an SAP system on SAP GUI.
 
             :Example:
-            
+
         >>> # Log in to SAP GUI
         >>> sap = SAPGUI()
         >>> sap.login('System', '001', 'username', 'password')
 
         Keywords
             sap, sap gui, sap client, login
-        
+
         Icon
             las la-briefcase
         """
@@ -9553,7 +9549,7 @@ class SAPGUI:
         Clicks on an identifier in the SAP GUI.
 
             :Example:
-            
+
         >>> # Log in to SAP GUI
         >>> sap = SAPGUI()
         >>> sap.login('System', '001', 'username', 'password')
@@ -9563,7 +9559,7 @@ class SAPGUI:
 
         Keywords
             sap, sap gui, sap client, click
-        
+
         Icon
             las la-briefcase
         """
@@ -9576,7 +9572,7 @@ class SAPGUI:
         Retrieves the text from a SAP GUI element.
 
             :Example:
-            
+
         >>> # Log in to SAP GUI
         >>> sap = SAPGUI()
         >>> sap.login('System', '001', 'username', 'password')
@@ -9585,7 +9581,7 @@ class SAPGUI:
 
         Keywords
             sap, sap gui, sap client, get text
-        
+
         Icon
             las la-briefcase
         """
@@ -9598,7 +9594,7 @@ class SAPGUI:
         Sets the text of a SAP GUI element.
 
             :Example:
-            
+
         >>> # Log in to SAP GUI
         >>> sap = SAPGUI()
         >>> sap.login('System', '001', 'username', 'password')
@@ -9606,7 +9602,7 @@ class SAPGUI:
 
         Keywords
             sap, sap gui, sap client, set text
-        
+
         Icon
             las la-briefcase
         """
@@ -9619,7 +9615,7 @@ class SAPGUI:
         Temporarily highlights a SAP GUI element
 
             :Example:
-            
+
         >>> # Log in to SAP GUI
         >>> sap = SAPGUI()
         >>> sap.login('System', '001', 'username', 'password')
@@ -9627,7 +9623,7 @@ class SAPGUI:
 
         Keywords
             sap, sap gui, sap client, highlight
-        
+
         Icon
             las la-briefcase
         """
@@ -9932,7 +9928,7 @@ def get_center_of_rectangle(rectangle):
 def is_visible(element_id, delay=1, timeout=30):
     """Check if element is visible on screen
 
-    This activity can be used to check if a certain element is visible on the screen. 
+    This activity can be used to check if a certain element is visible on the screen.
     Note that this uses Automagica vision and uses some advanced an fuzzy matching algorithms for finding identical elements.
 
     :parameter element_id: Element ID provided by the recorder
