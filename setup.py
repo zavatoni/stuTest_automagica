@@ -46,7 +46,7 @@ install_requires = [
     "pywinauto==0.6.5",  # BSD 3-Clause "New" or "Revised" License
     "openpyxl==2.4.8",  # MIT License
     "python-docx==0.8.6",  # MIT License
-    "PyPDF2==1.26.0",  # BSD 3-Clause "New" or "Revised" License
+    "PyPDF2==1.27.5",  # BSD 3-Clause "New" or "Revised" License
     "faker==2.0.3",  # MIT License
     # BSD 3-Clause "New" or "Revised" License (requires python3-devel on Ubuntu/Fedora)
     "psutil==5.6.6",
