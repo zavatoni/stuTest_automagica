@@ -57,7 +57,7 @@ install_requires = [
     "jupyterlab==1.2.4",  # BSD 3-Clause
     "py-trello==0.13.0",  # BSD 3-Clause "New" or "Revised" License
     "plyer==1.4.0",  # MIT License
-    "Pillow==7.0.0",  # PIL License (permissive),
+    "Pillow==9.3.0",  # PIL License (permissive),
     "pyperclip==1.7.0",  # BSD License (BSD)
     "PyAutoGUI==0.9.48",  # BSD 3-Clause "New" license
     "pysnmp==4.4.12",  # BSD 2-Clause "Simplified" License
